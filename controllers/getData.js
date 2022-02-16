@@ -2,7 +2,7 @@ const get = (req, res) => {
     res.send([
         { 
             id: "1000", 
-            image: "./images/mainvalleypik.jpg", 
+            image: "/images/mainvalleypik.jpg", 
             title: "Joshua Tree Overnight Adventure", 
             description: "Gujarat is vastly underrated and it’s a mystery to us why the region isn’t more well-known as a tourist destination. It has a plethora of temples and palaces", 
             category: "Travel", 
@@ -10,7 +10,7 @@ const get = (req, res) => {
         },
         { 
             id: "1001", 
-            image: "./images/sidevalleypik.jpg", 
+            image: "/images/sidevalleypik.jpg", 
             title: "Joshua Tree Overnight Adventure", 
             description: "Gujarat is vastly underrated and it’s a mystery to us why the region isn’t more well-known as a tourist destination. It has a plethora of temples and palaces", 
             category: "Travel", 
@@ -18,7 +18,7 @@ const get = (req, res) => {
         },
         { 
             id: "1", 
-            image: "./images/image1.jpg", 
+            image: "/images/image1.jpg", 
             title: "Joshua Tree Overnight Adventure", 
             description: "Gujarat is vastly underrated and it’s a mystery to us why the region isn’t more well-known as a tourist destination. It has a plethora of temples and palaces", 
             category: "Travel", 
@@ -26,7 +26,7 @@ const get = (req, res) => {
         },
         { 
             id: "2", 
-            image: "./images/home1.webp", 
+            image: "/images/home1.webp", 
             title: "CashOverflow.in, Pardeep Goyal", 
             description: "If you’re seeking financial freedom and looking for the best Indian blogs to read that teach you about finance, online marketing and carefully crafted articles, CashOverflow is a must read blog for you which is run by Pardeep Goyal. ", 
             category: "Finance", 
