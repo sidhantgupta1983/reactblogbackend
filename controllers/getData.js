@@ -1,5 +1,11 @@
-const get = (req, res) => {
-    res.send([
+const { query } = require("express");
+
+const getData = (req, res) => {
+    console.log("Request Query", req.query);
+    onsole.log("Request Params", req.params);
+
+
+    const data = [
         { 
             id: "1000", 
             image: "/images/mainvalleypik.jpg", 
@@ -758,7 +764,25 @@ const get = (req, res) => {
             category: "FOOD", 
             date: "/ FEBRUARY 11 2018"
         }
-    ])
+    ]
+
+    
+    if(req.query.category){
+        const userData=user.filter((val)=>val.category.toLowerCase()===req.query.category.toLowerCase())
+        console.log("hello")
+        res.send(userData)
+
+    }if(req.params.id){
+        console.log(req.params.id)
+        const userData=user.filter((val)=>val.id===Number(req.params.id))
+      
+        res.send(userData)
+
+    }
+
+    else{
+        res.send(data)
+    }
 }
 
-module.exports.getData = get;
+module.exports = getData;

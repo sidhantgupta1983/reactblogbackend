@@ -1,17 +1,13 @@
-const express = require("express");
-const cors = require("cors");
-const router  = require("./routes");
+const express=require("express");
+const app=express()
+const blogRoute=require('./routes/blogRoute')
+const cors=require("cors")
+app.use(cors())
 
-const port = 8000;
-const app = express();  // creating server
-
-app.use(cors());
-app.use("/api/v1", router);
-
-app.listen(port, ()=>{
-    console.log("Application has started successfully");
-});
+const PORT = process.env.PORT || 8000;
 
 
-
-
+app.use("/api/v1",blogRoute)
+app.listen(PORT,()=>{
+    console.log("application connection successful");
+})
